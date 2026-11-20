@@ -1,17 +1,11 @@
 {
   "compilerOptions": {
-    "lib": [
-      "deno.window",
-      "dom",
-      "dom.iterable"
-    ],
-    "strict": false
+    "lib": ["deno.window", "dom", "dom.iterable"],
+    "strict": true
   },
   "lint": {
     "rules": {
-      "tags": [
-        "recommended"
-      ]
+      "tags": ["recommended"]
     }
   },
   "fmt": {
@@ -33,11 +27,7 @@
     "fmt:check": "deno fmt --check",
     "ci": "deno fmt --check && deno lint && deno check src/**/*.ts && deno task build"
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".git"
-  ],
+  "exclude": ["node_modules", "dist", ".git"],
   "imports": {
     "vite": "npm:vite@8.3.1",
     "phaser": "npm:phaser@4.2.1"

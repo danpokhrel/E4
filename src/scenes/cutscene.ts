@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { HEIGHT, WIDTH } from "../actors.ts";
 import type { Hud } from "../hud.ts";
+import type { RunStats } from "./play.ts";
 import { play } from "../sounds.ts";
 import { TINTS } from "../textures.ts";
 import { Backdrop, fadeAway } from "./backdrop.ts";
@@ -14,13 +15,6 @@ const STORY: [number, string][] = [
 const WARP_AT = 9;
 const CREDITS_AT = 11;
 const RETURN_AT = 18;
-
-interface RunStats {
-  score: number;
-  kills: number;
-  hits: number;
-  continues: number;
-}
 
 export class CutsceneScene extends Phaser.Scene {
   private backdrop!: Backdrop;
